@@ -1,87 +1,89 @@
 原创技术——跨AI通讯协议
-打破网站信息孤岛，让每一个网站通过AI技术，实现智能互联。山东，临沂，平邑，王伟。
+打破网站信息孤岛，让每个网站通过AI技术，实现智能互联。山东，临沂，平邑，王伟。
 
-Original technology - Cross-AI communication protocol
-Break the information silos of websites and enable every website to achieve intelligent interconnection through AI technology. Shandong, Linyi, Pingyi, Wang Wei.
+原创技术-跨AI通信协议
+打破网站的信息孤岛，通过AI技术让每个网站实现智能互联。山东临沂平邑王伟。
 
-==================================================
+实现核心功能的简单演示站点：ai0539.cc
+A simple demonstration site for core functionalities: ai0539.cc
+===================================================
 
-WangWei Protocol (WWP) 白皮书 v1.0
-跨 AI 通信协议：让每个网站都成为智能体网络的一个节点
+王维协议(WWP)PDF v1.0
+跨AI通信协议：让每个网站都成为智能体网络的一个节点
 摘要
-WangWei Protocol (WWP) 是一个轻量级、去中心化的跨站通信协议，专为 AI 增强的互联网而设计。它允许不同域名下的服务、应用或 AI 智能体通过简单的签名验证和自然语言处理进行安全、可信的互操作。本协议由独立开发者王伟（Wang Wei）在中国山东临沂平邑县发起，旨在打破信息孤岛，让 AI 能够像人类一样跨站“对话”。
+王伟协议（WWP）是一个轻量级、去中心化的跨站通信协议，专为人工智能增强的互联网而设计。它允许不同域名下的服务、应用或人工智能智能体通过简单的签名验证和自然语言处理进行安全、可信的互操作。本协议由独立开发者王伟（Wang Wei）在中国山东临沂平邑县发起，旨在打破信息孤岛，让人工智能能够像人类一样跨站“对话”。
 
-1. 背景与动机
-传统互联网中，网站之间缺乏标准化的通信机制。API 集成需要双方预先协商，成本高、灵活性差。
+1.背景与动机
+传统互联网中，网站之间缺乏标准化的通信机制。API集成需要双方事先协商，成本高、灵活性差。
 
-随着 AI 技术的普及，我们迫切需要一个开放协议，使得任意网站上的 AI 能够：
+随着人工智能技术的普及，我们提出需要一个开放协议，以使人工智能能够网站上：
 
-理解用户意图，并自动与其它网站的服务交互
+理解用户意图，并自动与其他网站的服务交互
 
-安全地交换消息，无需中心化中介
+安全地交换消息，分散中心化在里面
 
-可扩展地支持订阅、推送、查询等模式
+可扩展地支持订阅、订阅、查询等模式
 
-WWP 应运而生。它不依赖任何大厂或特定平台，仅需网站管理员部署一个轻量级网关，即可加入全球 AI 通信网络。
+WWP应运而生。它不依赖于任何大厂或特定平台，由网站管理员部署一个轻量级网关，即可加入全球AI通信网络。
 
-2. 设计哲学
+2.设计哲学
 去中心化：没有中央服务器，每个站点自主运行。
 
-密码学安全：基于 RSA 签名验证，确保消息来源真实、内容未被篡改。
+密码学安全：基于RSA签名验证，确保消息来源真实、内容可篡改。
 
-AI 原生：鼓励集成大语言模型，使消息内容能够被理解并智能回复。
+AI 最初：鼓励集成大语言模型，使消息内容能够被理解并智能回复。
 
-易部署：只需一个 PHP 文件，任何支持 HTTPS 的站点 5 分钟内即可接入。
+简易部署：只需一个PHP文件，任何支持HTTPS的站点5分钟内即可接入。
 
-个人印记：路径中永久包含创始人名字缩写 wwp 和对 DeepSeek 的致敬 deepseek。
+个人印记：路径中永久包含创始人名字缩写wwp和对DeepSeek的致敬deepseek。
 
-3. 协议规范
+3.协议规范
 3.1 地址格式
 用户名#域名
-示例：alice#ai0539.cc
-# 符号区别于传统邮箱的 @，寓意“话题”或“连接”。
+译文：alice#ai0539.cc
+#符号区别于传统邮箱的@，寓意“话题”或“连接”。
 
 3.2 固定端点
 每个 WWP 站点必须提供以下公开资源：
 
-用途	URL
-网关（接收消息）	https://域名/deepseek/wwp/
-公钥文件	https://域名/deepseek/wwp/public-key.pem
-收件箱查询（可选）	https://域名/deepseek/wwp/?action=inbox
+用途网址
+网关（接收消息） https://域名/deepseek/wwp/
+公钥文件 https://域名/deepseek/wwp/public-key.pem
+收件箱查询（任选） https://域名/deepseek/wwp/?action=inbox
 
 3.3 消息格式
-发送消息时，构造如下 JSON：
+发送消息时，构造如下JSON：
 
 json
 {
-  "from": "sender#domainA",
-  "to": "recipient#domainB",
+  "from": "发件人#domainA",
+  "to": "收件人#domainB",
   "content": "消息文本",
-  "timestamp": 1700000000,
-  "signature": "Base64(RSA_Sign(SHA256(from+to+content+timestamp)))"
+  “时间戳”：1700000000，
+  “签名”：“Base64（RSA_Sign（SHA256（从+到+内容+时间戳）））”
 }
-from：发送方地址
+来自：发送方地址
 
 to：接收方地址
 
-content：原始文本（支持自然语言）
+内容：原始文本（支持自然语言）
 
-timestamp：Unix 时间戳，用于防重放
+timestamp：Unix时间戳，用于防重放
 
-signature：使用发送方私钥对字符串 from+to+content+timestamp 的 SHA256 哈希进行签名，然后 base64 编码。
+签名：使用发送方私钥对字符串 from+to+content+timestamp 的 SHA256 哈希进行签名，然后进行 base64 编码。
 
 3.4 验证流程
 接收方收到消息后：
 
-解析 JSON，提取字段。
+JSON解析，取出字段。
 
-从 from 中的域名下载公钥（https://域名/deepseek/wwp/public-key.pem）。
+来自中的域名下载地址（https://域名/deepseek/wwp/public-key.pem）。
 
-计算待签名数据的哈希，用公钥验证 signature。
+计算待签名数据的哈希，用公钥验证签名。
 
-验证通过后，可存储消息、触发 AI 回复等。
+验证通过后，可存储消息、触发AI回复等。
 
-3.5 AI 智能回复（可选）
+3.5 AI智能回复（任选）
 接收方可集成大语言模型（如 DeepSeek API），对 content 生成自然语言回复，然后同样按照标准格式签名后发送回原发送方。回复中的 from 应使用 ai-bot#本域名，以避免无限循环。
 
 4. 参考实现（PHP）
