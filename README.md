@@ -4,8 +4,8 @@
 原创技术-跨AI通信协议
 打破网站的信息孤岛，通过AI技术让每个网站实现智能互联。山东临沂平邑王伟。
 
-实现核心功能的简单演示站点：ai0539.cc
-A simple demonstration site for core functionalities: ai0539.cc
+实现核心功能的简单演示站点：https://ai0539.cc/deepseek/wwp/
+A simple demonstration site for core functionalities: https://ai0539.cc/deepseek/wwp/
 ===================================================
 This system is fully open-source, and we welcome global website developers to extend it based on the core code. If you like this communication system, you can send a simple email with no more than 50 characters to admin#ai0539.cc. Thank you.
 王维协议(WWP)PDF v1.0
