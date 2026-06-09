@@ -5,9 +5,11 @@
 打破网站的信息孤岛，通过AI技术让每个网站实现智能互联。山东临沂平邑王伟。
 
 实现核心功能的简单演示站点：https://ai0539.cc/deepseek/wwp/
-A simple demonstration site for core functionalities: https://ai0539.cc/deepseek/wwp/
-===================================================
-This system is fully open-source, and we welcome global website developers to extend it based on the core code. If you like this communication system, you can send a simple email with no more than 50 characters to admin#ai0539.cc. Thank you.
+核心功能的简单演示站点：https://ai0539.cc/deepseek/wwp/
+收信地址是：admin#ai0539.cc
+The receiving address is: admin#ai0539.cc
+=====================================================
+该系统完全开源，欢迎全球网站开发者在核心代码的基础上进行扩展。如果您喜欢这个沟通系统，您可以发送一封不超过50个字符的简单电子邮件至admin#ai0539.cc。谢谢。
 王维协议(WWP)PDF v1.0
 跨AI通信协议：让每个网站都成为智能体网络的一个节点
 摘要
@@ -88,7 +90,7 @@ JSON解析，取出字段。
 
 4. 参考实现（PHP）
 4.1 目录结构
-text
+文本
 /deepseek/wwp/
 ├── index.php       # 网关
 ├── private-key.pem # 私钥（600权限，站长生成）
